@@ -1,0 +1,171 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+  margin-left: 40px;
+  margin-right: 40px
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+.legend {
+  background: green;
+  border: 1px solid rgb(46, 54, 129);
+  float: left;  
+  height: 50px;
+  padding: 0;
+  margin-top: 30px;
+  width: 60px;
+  text-align: center; 
+  
+}
+.square {
+  /* background: #fff; */
+  border: 3px solid rgb(46, 54, 129);
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 71px;
+  padding: 0;
+  text-align: center;
+  width: 71px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.board-grid {
+  padding-top: 120px;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.newRoomForm {
+  padding-bottom: 40px;
+}
+
+nav {
+	background-color: green;
+	overflow: hidden;
+  padding: 1em;
+  border-color: orange;
+  border: 1px solid rgb(46, 54, 129);
+  color: white;
+}
+
+
+		
+wrapper {
+  padding-bottom: 20px;
+}
+.points {
+  margin-right: 20px;
+  border: 5px solid green;
+	background-color: green;
+	overflow: hidden;
+  /* padding: 3em; */
+  /* border-color: yellow; */
+  /* border: 2px solid rgb(46, 54, 129); */
+  color: white;
+  font-size: large;
+ 	text-decoration: none;
+	display: inline-block;
+  padding: 25px 2.2em;
+  width: 140px;
+}
+button.buy {
+  border-radius: 50%;
+ margin-right: 0;
+  padding: 20px;
+	background-color: rgb(46, 54, 129);
+  overflow: hidden;
+  text-align: center;
+  border-color: rgb(46, 54, 129);
+  border: 5px solid orange;
+  color: white;
+  font-size: large;
+  text-decoration: none;
+  display: inline-block;
+    padding: 40px 2em;
+}
+ 
+.buy:hover {
+  color: #FFF;
+  background: green;
+
+}
+.bidsLeft {
+  margin-right: 20px;
+  padding: 20px;
+	background-color: orange;
+  overflow: hidden;
+  text-align: center;
+  border-color: orange;
+  border: 5px solid orange;
+  color: white;
+  font-size: large;
+  text-decoration: none;
+  display: inline-block;
+    padding: 25px 2.2em;
+  /* padding-top: 25px ;
+  padding-bottom: 25px;
+  padding-left: 10px; */
+  width: 180px;
+}
+
+/* ROOM FORM */
+input[type=text], select {
+    width: auto;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid rgb(46, 54, 129);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 5px;
+} 
+
+input[type=submit] {
+    width: auto;
+    background-color: green;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+input[type=submit]:hover {
+    background-color: orange;
+}
+
+/* div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}   */
