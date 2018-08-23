@@ -6,7 +6,7 @@ export const API_ROOT = ["https://lucky_bidwell_backend.herokuapp.com", "http://
 // production
 export const API_WS_ROOT = 'wss://lucky_bidwell_backend.herokuapp.com/cable';
 //
-wss: export const HEADERS = {
+export const HEADERS = {
   "Content-Type": "application/json",
   Accept: "application/json"
 };
