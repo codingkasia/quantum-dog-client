@@ -8,6 +8,6 @@ export const API_WS_ROOT = 'wss://lucky_bidwell_backend.herokuapp.com/cable';
 //
 export const HEADERS = {
   "Content-Type": "application/json",
-  Accept: "application/json",
-  'Access-Control-Allow-Headers': 'Content-Type'
+  Accept: "application/json"
+  // 'Access-Control-Allow-Headers': 'Content-Type'
 };
