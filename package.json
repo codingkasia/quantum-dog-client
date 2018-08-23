@@ -1,5 +1,5 @@
 {
-  "name": "lucky_bidwell-frontend",
+  "name": "quantum-dog",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://quantum-dog.herokuapp.com/",
@@ -15,7 +15,8 @@
     "update-node": "^0.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "serve -s build",
+    // "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
