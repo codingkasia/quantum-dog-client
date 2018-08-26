@@ -23,8 +23,6 @@ class Square extends React.Component {
     return lucky
   }
 
-  
-
   fetchNewLucky = () => {
     fetch(`${API_ROOT}/numbers`)
       .then(function (response) {
@@ -75,8 +73,12 @@ class Square extends React.Component {
   }
  
 
-  handleClick = () => {
+  handleClick = (e) => {
     // e.preventDefault();
+    // console.log(`e:`);
+    // console.dir(e.target);
+    console.log('this:');
+    console.log(this);
     this.props.trackUserGuesses()
     this.setState({ value: this.props.value });
     this.evaluateClick();
@@ -96,7 +98,6 @@ class Square extends React.Component {
       headers: HEADERS
     });
   };
-
   render() {
     // console.log(`lucky number is ${this.state.lucky}`);
     // console.log(`this props new lucky ${this.props.newLucky}`)
@@ -109,6 +110,19 @@ class Square extends React.Component {
     );
   }
 }
+
+
+//   render() {
+//     // console.log(`lucky number is ${this.state.lucky}`);
+//     // console.log(`this props new lucky ${this.props.newLucky}`)
+//     return <div>
+//         <button className="square" style={{ background: this.bgColor }} onClick={this.handleClick} />
+//       {/* <button className="square" style={{ background: this.props.color }} onClick={this.handleClick} /> */}
+//        {/* {this.displayBoard()} */}
+        
+//       </div>;
+//   }
+// }
 
 export default Square;
 

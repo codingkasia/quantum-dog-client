@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from "react-dom";
 import Square from './Square'
 import { API_ROOT, HEADERS } from "../constants";
 const award = 100;
@@ -13,6 +14,11 @@ class Board extends React.Component {
     guessesLeft: guessesLeft,
     points: 1,
     jackpotShare: 38
+    // squareInfo: {
+    //   1: 'yellow',
+    //   2: 'blue',
+    //   //...
+    // }
   };
 
   buyGuesses = () => {
@@ -81,27 +87,15 @@ class Board extends React.Component {
   // };
 
   renderSquare(i) {
-    return (
-      <Square
-        calculateJackpot={this.calculateJackpot}
-        newLucky={this.props.newLucky}
-        points={this.state.points}
-        guesses={this.props.room.guesses}
-        value={i}
-        room_id={this.props.room.id}
-        user_id={this.props.activeUser}
-        newLucky={this.props.newLucky}
-        updateStatePoints={this.updateStatePoints}
-        trackUserGuesses={this.trackUserGuesses}
-        generateNewLucky={this.props.generateNewLucky}
-        postPointsToDB={this.postPointsToDB}
-      />
-    );
+    // console.log(`i: ${i}`);
+    // color = { this.state.squareInfo[i] }
+    return <Square  calculateJackpot={this.calculateJackpot} newLucky={this.props.newLucky} points={this.state.points} guesses={this.props.room.guesses} value={i} room_id={this.props.room.id} user_id={this.props.activeUser} newLucky={this.props.newLucky} updateStatePoints={this.updateStatePoints} trackUserGuesses={this.trackUserGuesses} generateNewLucky={this.props.generateNewLucky} postPointsToDB={this.postPointsToDB}  />;
   }
 
   render() {
     // console.log(`USER is, ${this.props.activeUser}`)
     return <div>
+      
         <div>
           <div className="points">POINTS: {this.state.points}</div>
           {/* <div className="jackpot">
@@ -176,6 +170,7 @@ class Board extends React.Component {
           {this.renderSquare(49)}
           {this.renderSquare(50)}
         </div>
+        
       </div>;
   }
 }
