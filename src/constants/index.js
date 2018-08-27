@@ -1,7 +1,7 @@
 // local 
 // export const API_ROOT = 'http://localhost:3001';
 // production
-export const API_ROOT = ["https://lucky_bidwell_backend.herokuapp.com", "http://lucky_bidwell_backend.herokuapp.com"];
+export const API_ROOT = ["https://lucky_bidwell_backend.herokuapp.com"];
 // # local
 // export const API_WS_ROOT = 'ws://localhost:3001/cable';
 // production
