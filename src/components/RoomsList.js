@@ -66,7 +66,7 @@ class RoomsList extends React.Component {
 
   handleChangeGuess = data => {
     // console.log(this.props.value);
-    fetch("http://localhost:3001/guesses", {
+    fetch(`${API_ROOT}/guesses`, {
       method: "POST",
       body: JSON.stringify({ value: data }),
       headers: {

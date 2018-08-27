@@ -1,7 +1,8 @@
 import React from 'react'
 import RoomsList from './RoomsList'
+import { API_ROOT, HEADERS } from "../constants";
 
-const baseUrl = 'http://localhost:3001'
+const baseUrl = API_ROOT;
 // const baseUrl =
 //   process.env["NODE_ENV"] === "development"
 //     ? "http://localhost:3001"

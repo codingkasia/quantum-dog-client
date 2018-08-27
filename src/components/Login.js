@@ -1,5 +1,5 @@
 import React from "react";
-
+import { API_ROOT, HEADERS } from "../constants";
 
 class Login extends React.Component {
     state = {
@@ -16,7 +16,7 @@ class Login extends React.Component {
             password: this.state.password
         };
 
-        let url = "http://localhost:3001/login" 
+        let url = `${API_ROOT}/login`
       
         fetch(url, {
             method: "POST",
