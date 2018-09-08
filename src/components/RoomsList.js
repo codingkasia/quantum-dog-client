@@ -1,6 +1,6 @@
 import React from 'react';
 import { ActionCable } from 'react-actioncable-provider';
-import { API_ROOT } from '../constants';
+import { API_ROOT, HEADERS } from '../constants';
 import RoomForm from './RoomForm';
 import  Board from './Board';
 import Cable from './Cables';
@@ -69,10 +69,7 @@ class RoomsList extends React.Component {
     fetch(`${API_ROOT}/guesses`, {
       method: "POST",
       body: JSON.stringify({ value: data }),
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
-      }
+      headers: HEADERS
     })
       .then(res => res.json())
       .catch(error => console.error("Error:", error))

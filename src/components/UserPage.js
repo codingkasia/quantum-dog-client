@@ -1,8 +1,8 @@
 import React from 'react'
 import RoomsList from './RoomsList'
-import { API_ROOT, HEADERS } from "../constants";
+import { API_ROOT } from "../constants";
 
-const baseUrl = API_ROOT;
+// const baseUrl = API_ROOT;
 // const baseUrl =
 //   process.env["NODE_ENV"] === "development"
 //     ? "http://localhost:3001"
@@ -13,16 +13,17 @@ class UserPage extends React.Component {
   };
   componentWillMount () {
     let token = localStorage.getItem('token')
-    fetch(`${baseUrl}/user`, {
+    fetch(`${API_ROOT}/user`, {
       headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
+        "Content-Type": "application/json",
+        Accept: "application/json",
         Authorization: `Bearer ${token}`
       }
-    }).then(res => res.json())
-        .then(json => {
-          this.setState({ user: json });
-        })
+    })
+      .then(res => res.json())
+      .then(json => {
+        this.setState({ user: json });
+      });
       
   }
    

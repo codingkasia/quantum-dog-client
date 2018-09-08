@@ -22,7 +22,8 @@
   },
   "proxy": {
     "/api": {
-      "target": "http://foo",
+      "target": "https://quantumdog.netlify.com",
+      "wss": true,
       "pathRewrite": {
         "^/api": "/"
       }
